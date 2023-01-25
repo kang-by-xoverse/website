@@ -22,7 +22,7 @@ const Navbar = () => {
         <Header height={60} px="md">
           <Group position="apart" sx={{ height: '100%' }}>
             <Link to="/">
-              <img src="/images/Logo.png" height={30} alt="" />
+              <img src="/images/logo.png" height={30} alt="" />
             </Link>
             <Group className={classes.hiddenMobile}>
               <Link to="/kscan">

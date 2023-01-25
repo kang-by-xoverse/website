@@ -25,8 +25,8 @@ const useStyles = createStyles((theme) => ({
   },
 }))
 
-interface TableScrollAreaProps {
-  data: { sender: string; reciever: string }[];
+type TableScrollAreaProps = {
+  data: { sender: string; action: string; reciever: string }[];
 }
 
 const Data = ({ data }: TableScrollAreaProps) => {
@@ -36,7 +36,7 @@ const Data = ({ data }: TableScrollAreaProps) => {
   const rows = data.map((row) => (
     <tr key={row.sender}>
       <td>{row.sender}</td>
-      <td>{'Transfered to :'}</td>
+      <td>{row.action}</td>
       <td>{row.reciever}</td>
     </tr>
   ))

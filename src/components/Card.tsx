@@ -21,14 +21,14 @@ const useStyles = createStyles((theme) => ({
 }))
 
 interface UserInfoIconsProps {
-  name?: string;
+  kind?: string;
   title?: string;
-  phone?: string;
-  email?: string;
+  meta?: string;
+  owner?: string;
   avatar?: string;
 }
 
-const Card = ({ name, title, phone, email, avatar }: UserInfoIconsProps) => {
+const Card = ({ kind, title, meta, owner, avatar }: UserInfoIconsProps) => {
   const { classes } = useStyles();
   return (
     <div className={classes.root}>
@@ -40,18 +40,18 @@ const Card = ({ name, title, phone, email, avatar }: UserInfoIconsProps) => {
           </Text>
 
           <Text size={15} weight={500} className={classes.name}>
-            Name : {name}
+            Kind : {kind}
           </Text>
 
           <Group noWrap spacing={10} mt={3}>
             <Text size={15}>
-              Email : {email}
+              Owner : {owner}
             </Text>
           </Group>
 
           <Group noWrap spacing={10} mt={5}>
             <Text size={15}>
-              Phone : {phone}
+              Meta : {meta}
             </Text>
           </Group>
         </div>
